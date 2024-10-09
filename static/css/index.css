@@ -1,0 +1,93 @@
+/* Styles pour le contenu de la page */
+.content {
+    padding: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.header-content {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.product-grid {
+    display: flex;
+    gap: 60px; /* Augmente l'espace entre les cartes */
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer les cartes */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(45% - 60px); /* Réduit la taille des cartes pour en afficher plus sur la page */
+    max-width: calc(45% - 60px);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    min-height: 400px;
+}
+
+.product-card:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+}
+
+.product-card img {
+    height: 300px; /* Réduit la hauteur de l'image */
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+}
+.unlock-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4b5d29;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Empêche le clic direct sur le bouton */
+}
+
+.product-card:hover .unlock-button {
+    opacity: 1; /* Le bouton apparaît au survol */
+}
+
+
+.card-content {
+    padding: 20px; /* Plus de padding pour laisser respirer le contenu */
+    flex-grow: 2; /* Cela fait en sorte que la zone de contenu occupe plus d'espace */
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Merriweather', serif; /* Police de caractère pour tout le contenu */
+}
+
+.card-content .title {
+    font-size: 1.4em; /* Augmente légèrement la taille du titre */
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+.card-content .author,
+.card-content .date {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
