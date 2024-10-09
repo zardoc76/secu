@@ -1,4 +1,4 @@
-/* Styles pour le contenu de la page */
+ /* Styles pour le contenu de la page */
 .content {
     padding: 20px;
     font-family: 'Georgia', serif;
@@ -90,4 +90,63 @@ body {
     font-size: 1em;
     color: #555;
     margin: 5px 0;
+}
+
+.login-container, .register-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.logo {
+    width: 25%; /* ou une autre valeur en pourcentage */
+    height: auto; /* Conserve le ratio d'aspect */
+    margin-bottom: 20px;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#login-page, #register-page{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.button:hover {
+    background-color: #45a049;
 }
