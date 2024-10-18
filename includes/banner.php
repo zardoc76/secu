@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVulnerableSite</title>
+
     <style>
         /* Styles pour la bannière */
         .banner {
@@ -38,9 +40,21 @@
         .buttons button:hover {
             background-color: #3b4a22; /* Couleur plus foncée au survol */
         }
+        .logged_in_info {
+	        text-align: right; 
+	        padding: 10px;
+        }
+        
+
     </style>
 </head>
 <body>
+<?php if (isset($_SESSION['user']['username'])) : ?>
+    <div class="logged_in_info">
+        <span>Welcome, <?php echo $_SESSION['user']['username']; ?></span> |
+        <span><a href="logout.php">Logout</a></span>
+    </div>
+<?php else : ?>
     <header>
         <div class="banner">
             <div class="logo">MyVulnerableSite</div>
@@ -50,5 +64,6 @@
             </div>
         </div>
     </header>
+<?php endif; ?>
 </body>
 </html>
