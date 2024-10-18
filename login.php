@@ -11,16 +11,19 @@
 <div class="login-container">
     <img src="static/images/INSA.png" alt="Logo INSA" class="logo">
     <h2>Login</h2>
-    <form action="login_action.php" method="post">
+    <form action="register.php" method="post">
         <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <label for="username">Username</label>
+            <input type="username" id="username" name="username" required autofocus>
         </div>
         <div class="input-group">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
+            <p style="text-align: right;">
+             <a href="register.php" style="color: blue; text-decoration: underline;">Don't have an account?</a>
+            </p>
         </div>
-        <button type="submit" class="button">Login</button>
+        <button type="submit" class="button" name="login_btn">Login</button>
     </form>
 </div>
 
