@@ -60,6 +60,10 @@
 </head>
 <body>
 
+<?php
+if (isset($_SESSION['user'])) { 
+    // Affiche le formulaire si l'utilisateur est connecté
+    ?>
     <div class="form-container">
         <h1>Saisie CB</h1>
         <form action="submit_cb.php" method="post">
@@ -70,10 +74,23 @@
                 <input type="checkbox" id="save-card" name="save-card">
                 <label for="save-card">Enregistrer votre CB pour les futures transactions</label>
             </div>
-
+            <input type="hidden" name="news_id" value="<?php echo $_POST['news_id']; ?>">
             <input type="submit" value="Valider">
         </form>
     </div>
-  
+    <?php
+} else {
+    // Affiche un message si l'utilisateur n'est pas connecté
+    echo "Vous devez être connecté pour effectuer cette opération.";
+    ?>
+    <a href="index.php" style="color: #007BFF;   font-weight: bold;">C'est par ici !</a>
+
+    <?php
+}
+?>
+
+
+
+
 </body>
 </html>

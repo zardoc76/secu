@@ -122,7 +122,7 @@ function esc(String $value)
 function getUserById($id)
 {
  global $conn; //rendre disponible, à cette fonction, la variable de connexion $conn
- $sql ="SELECT u.username ,u.role FROM utilisateur as u WHERE u.id='$id' LIMIT 1"; // requête qui récupère le user et son rôle
+ $sql ="SELECT u.id, u.username ,u.role FROM utilisateur as u WHERE u.id='$id' LIMIT 1"; // requête qui récupère le user et son rôle
  $result = mysqli_query($conn, $sql); 
  $user =  mysqli_fetch_assoc($result);  // transforme le résultat de la requête en tableau associatif
  return $user;
